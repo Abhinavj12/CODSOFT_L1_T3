@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0,0%,95%);
+
+}
+#calculator{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0,0%,15%);
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 10px 200px rgba(0, 0, 0, 0.5), 0 600px 60px rgba(0, 0, 0, 0.3);
+}
+
+#display{
+    width: 93%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    background-color:hsl(0,0%,20%);
+    color: white;
+    border-radius: 15px;
+}
+
+#keys{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:10px;
+    padding: 25px;
+}
+
+
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0,0%,30%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.3);
+}
+button:hover{
+    background-color:hsl(0,0%,40%)
+}
+button:active{
+    background-color: hsl(0,0%,50%);
+}
+
+.operator-btn{
+    background-color: orange;
+}
+.operator-btn:hover{
+    background-color: red;
+}
+.operator-btn:active{
+    background-color:rgba(209, 100, 33, 0.813)
+}
+.b1{
+    background-color: blue;
+    width:200px;
+    margin-left: 10px;
+    margin-bottom: 300px;
+   
+}
+.b2{
+    background-color: blue;
+}
+.b3{
+    margin-left: 30px;
+    margin-bottom:430px ;
+}
+.b4{
+    background-color: rgb(211, 97, 211);
+}
+
+
+/* Light mode styles */
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.light-mode #calculator {
+    background-color: hsl(0, 0%, 90%);
+}
+
+body.light-mode #display {
+    background-color: white;
+    color: black;
+}
+
+body.light-mode button {
+    background-color: white;
+    color: black;
+}
+body.light-mode .operator-btn{
+    background-color: orange;
+}
+body.light-mode .b2{
+    background-color: blue;
+}
+body.light-mode .b4{
+    background-color: rgb(211, 97, 211);
+}
+body.light-mode .b5 box-icon {
+    color: black !important;
+}
+
+
+#A1{
+     background-color: aqua;
+     width: 99%;
+     height:150px;
+     justify-content: center;
+     display: flex;
+     align-items: center;
+     border-radius: 15px;
+     margin-left: 3px;
+     margin-bottom: 2px;
+     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+     opacity: 1;
+     visibility: visible;
+}
+#A1.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#A1 button{
+    
+    font-size: 40px;
+    margin-right: 15px;
+}
+

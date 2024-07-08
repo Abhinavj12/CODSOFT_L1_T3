@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/46c190efca.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</head>
+<body>
+    <div id="calculator">
+        <input id="display" >
+        <div id="keys">
+            <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+            <button onclick="appendToDisplay('7')">7</button>        
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('sin(')"> sin </button>
+            <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('cos(')"> cos </button>
+            <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('tan(')"> tan </button>
+            <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('Math.PI')"> π </button>
+            <button onclick="appendToDisplay('log(')"> log </button>
+            <button onclick="clearDisplay()" class="operator-btn">C</button>
+            <button  onclick="appendToDisplay('%')" class="operator-btn">%</button>
+           
+           
+            <button onclick="appendToDisplay('(')"> ( </button>
+            <button onclick="appendToDisplay(')')"> ) </button>
+            <button class="operator-btn" onclick="trimLastCharacter()"><i class="fa-solid fa-delete-left"></i></button>
+            <button class="b2" id="toggleButton""> A</button>
+            
+            <button class="b2" onclick="squareRoot()"><i class="fa-solid fa-square-root-variable"></i></button>
+            <button class="b2" onclick="square()">x²</button><button class="b2" onclick="cube()"> x³</button>
+            <button onclick="calculate()" class="b4">=</button>
+           
+            
+        </div>
+        <div id="A1">
+            <button onclick="Square()"> <i class="fa-regular fa-square"></i></button>
+            <button onclick="Rectangle()" class="b5">
+                <i class="fa-solid fa-tv"></i>
+            </button>
+            
+            
+            <button onclick="circle()"> <i class="fa-regular fa-circle"></i></button>
+    </div>
+    </div>
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            var element = document.getElementById('A1');
+            if (element.style.display === 'none') {
+                element.style.display = 'flex';
+            } else {
+                element.style.display = 'none';
+            }
+        });
+    </script>
+    <div id="area">
+        <button onclick="toggleMode()"  class="b3"> <i class="fa-regular fa-lightbulb"></i></button>
+       
+       
+        
+       
+        
+        
+        
+    </div>
+    <script src="index.js"></script>
+    <script>
+
+    function Square() {
+    var x = parseInt(prompt("Enter Side of square"));
+    
+    var area;
+    var perimeter;
+    
+    area = x * x;
+    perimeter = 4 * x;
+    
+    alert("Area is " + area + " \r\nPerimeter is " + perimeter);
+    
+    display.value="A="+area+" P="+perimeter;
+}
+function Rectangle()
+ {
+  var x=parseInt(prompt("Enter length"));
+  var y=parseInt(prompt("Enter breadth"));
+  
+  var area;
+  var perimeter;
+ 
+  
+  area=x*y;
+  perimeter=2*x+2*y;
+  
+  alert(" \rArea is " + area + "\rPerimeter is " + perimeter);
+  display.value="A="+area+" P="+perimeter;
+ }
+ function circle()
+ {
+   var x=parseInt(prompt(" Enter radius of circle"));
+   var area;
+   var perimeter;
+   area=3.14*x*x;
+   circumference =2*3.14*x;
+   alert("Area of Circle is "+area+ " \rCircumference of circle "+ circumference)
+   display.value="A="+area+" P="+perimeter;
+ }
+
+
+function toggleMode() {
+            document.body.classList.toggle('light-mode');
+        }
+
+       </script>
+    </script>
+</body>
+</html>
